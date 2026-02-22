@@ -1,14 +1,41 @@
 {
-  "name": "notion-mcp-server",
+  "name": "@devheerim/notion-mcp-server",
   "version": "1.0.0",
+  "description": "Notion API MCP server with powerful database query support including filters, sorts, and pagination",
   "type": "module",
+  "license": "MIT",
+  "author": "devheerim",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Henry-Hong/Notion-MCP.git"
+  },
+  "homepage": "https://github.com/Henry-Hong/Notion-MCP#readme",
+  "bugs": {
+    "url": "https://github.com/Henry-Hong/Notion-MCP/issues"
+  },
+  "keywords": [
+    "notion",
+    "mcp",
+    "model-context-protocol",
+    "notion-api",
+    "claude",
+    "ai",
+    "database",
+    "mcp-server"
+  ],
   "bin": {
     "notion-mcp-server": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
